@@ -323,6 +323,22 @@ section h2::after {
     color: var(--accent-hover);
 }
 
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+}
+
 /* Languages */
 .language-grid {
     display: grid;
