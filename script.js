@@ -42,29 +42,21 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Add typing effect to hero title
+    // Add simple fade-in effect to hero title
     const heroTitle = document.querySelector('.hero h1');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        heroTitle.textContent = '';
-        let charIndex = 0;
-        
-        function typeWriter() {
-            if (charIndex < originalText.length) {
-                heroTitle.textContent += originalText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-        
-        setTimeout(typeWriter, 500);
+        heroTitle.style.opacity = '0';
+        heroTitle.style.transition = 'opacity 1s ease';
+        setTimeout(() => {
+            heroTitle.style.opacity = '1';
+        }, 300);
     }
 
-    // Add hover effect to project cards
+    // Add subtle hover effect to project cards
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.boxShadow = '0 10px 30px rgba(0, 255, 136, 0.2)';
+            this.style.boxShadow = '0 4px 12px rgba(44, 62, 80, 0.1)';
         });
         
         card.addEventListener('mouseleave', function() {
@@ -91,14 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add parallax effect to hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
+    // Remove parallax effect for cleaner look
 
     // Add active section highlighting
     const sectionObserver = new IntersectionObserver(function(entries) {
@@ -118,11 +103,11 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
 
-    // Add skill tag animation
+    // Add subtle skill tag animation
     const skillTags = document.querySelectorAll('.tag');
     skillTags.forEach((tag, index) => {
-        tag.style.animationDelay = `${index * 0.1}s`;
-        tag.style.animation = 'fadeInUp 0.5s ease forwards';
+        tag.style.animationDelay = `${index * 0.05}s`;
+        tag.style.animation = 'fadeInUp 0.3s ease forwards';
     });
 
     // Add CSS animation keyframes
@@ -131,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(10px);
             }
             to {
                 opacity: 1;
@@ -145,12 +130,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         .timeline-item {
             opacity: 0;
-            transform: translateX(-30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateX(-20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
         
         .timeline-item:nth-child(even) {
-            transform: translateX(30px);
+            transform: translateX(20px);
         }
         
         .timeline-item.animate {
@@ -163,8 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
         }
         
         .edu-item {
@@ -172,8 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         .edu-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
         }
         
         .language-item {
@@ -181,8 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         .language-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
         }
     `;
     document.head.appendChild(style);
@@ -202,6 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add console Easter egg
-console.log('%c Welcome to Armin Imamovic\'s Portfolio! ', 'background: #00ff88; color: #0a0a0a; font-size: 16px; font-weight: bold; padding: 10px;');
-console.log('%c Feel free to explore the code and connect! ', 'background: #1a1a1a; color: #00ff88; font-size: 12px; padding: 5px;');
+// Add console welcome message
+console.log('%c Welcome to Armin Imamovic\'s Portfolio ', 'background: #2c3e50; color: #ffffff; font-size: 14px; font-weight: 300; padding: 8px;');
+console.log('%c Feel free to explore the work and connect ', 'background: #f8f9fa; color: #2c3e50; font-size: 12px; padding: 4px;');
