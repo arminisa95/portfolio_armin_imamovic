@@ -65,9 +65,25 @@
             box-shadow: 0 12px 32px rgba(44, 62, 80, 0.2);
         }
 
-        .profile-pic[src=""], .profile-pic:not([src]) {
-            background-color: #e0e0e0;
-            border: 2px dashed #ccc;
+        .profile-pic-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            margin-bottom: 2rem;
+            background-color: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--text-secondary);
+            box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-pic-placeholder:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(44, 62, 80, 0.2);
         }
 
         .hero h1 {
@@ -506,8 +522,7 @@
 <body>
     <div class="container">
         <header class="hero">
-            <img src="file:///c:/Users/IBISACAM/Desktop/Portfolio_Armin_Imamovic/profile_pic.jpeg" alt="Armin Isa Imamovic" class="profile-pic" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-<div style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid #2c3e50; margin-bottom: 2rem; background-color: #f0f0f0; display: none; text-align: center; line-height: 150px; color: #666;">No Image</div>
+            <div class="profile-pic-placeholder">👤</div>
             <h1>Armin Isa Imamovic</h1>
             <p class="subtitle">Junior Java Developer & Software Engineer</p>
             <div class="contact-info">
