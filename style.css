@@ -328,6 +328,9 @@ section h2::after {
 .project-card h3 {
     color: var(--text-primary);
     margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .project-date {
