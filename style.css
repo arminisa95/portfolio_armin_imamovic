@@ -445,25 +445,31 @@ section h2::after {
     .timeline-item {
         flex-direction: column !important;
         align-items: flex-start !important;
-        padding-left: 50px;
+        padding-left: 80px;
         margin-bottom: 2rem;
+        position: relative;
     }
     
     .timeline-item .date {
         position: absolute;
         left: 20px;
+        top: 0;
         transform: translateX(-50%);
         padding: 0;
         white-space: nowrap;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         text-align: center;
-        width: 40px;
+        width: 60px;
+        z-index: 10;
+        font-weight: 600;
     }
     
     .timeline-item .content {
         width: 100%;
         padding: 1.5rem;
         margin-left: 0;
+        position: relative;
+        left: -10px;
     }
     
     .timeline-item .content::before {
