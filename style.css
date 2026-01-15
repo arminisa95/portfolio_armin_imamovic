@@ -290,11 +290,47 @@ section h2::after {
     transform: translateY(-1px);
 }
 
-/* Projects */
+/* Projects Section - Enhanced */
+.projects {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+}
+
+.projects h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.projects h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     max-width: 1000px;
     margin: 0 auto;
 }
