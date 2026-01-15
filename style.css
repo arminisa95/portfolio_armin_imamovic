@@ -439,27 +439,38 @@ section h2::after {
 /* Responsive Design */
 @media (max-width: 768px) {
     .timeline::before {
-        left: 30px;
+        left: 20px;
     }
     
     .timeline-item {
         flex-direction: column !important;
         align-items: flex-start !important;
-        padding-left: 60px;
+        padding-left: 50px;
+        margin-bottom: 2rem;
     }
     
     .timeline-item .date {
         position: absolute;
-        left: 30px;
+        left: 20px;
         transform: translateX(-50%);
         padding: 0;
         white-space: nowrap;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 40px;
+    }
+    
+    .timeline-item .content {
+        width: 100%;
+        padding: 1.5rem;
+        margin-left: 0;
     }
     
     .timeline-item .content::before {
-        left: -20px !important;
+        left: -10px !important;
         border-right-color: var(--bg-card) !important;
         border-left-color: transparent !important;
+        border-width: 8px;
     }
     
     .skills-grid {
