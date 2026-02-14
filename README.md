@@ -23,9 +23,9 @@ A minimalistic, dark-themed portfolio website showcasing my professional experie
 
 ## Technologies Used
 
-- **HTML5**: Semantic markup
+- **HTML5**: Semantic markup with embedded styles
 - **CSS3**: Modern styling with CSS Grid and Flexbox
-- **JavaScript**: Interactive features and animations
+- **JavaScript**: Interactive features and animations (embedded)
 - **Responsive Design**: Mobile-first approach
 
 ## Getting Started
@@ -53,9 +53,18 @@ A minimalistic, dark-themed portfolio website showcasing my professional experie
 
 ## Customization
 
-- Edit `index.html` to modify content
-- Update `style.css` to change styling and colors
-- Modify `script.js` to adjust animations and interactions
+- Edit `index.html` to modify content, styles, and scripts (all embedded)
+
+## File Structure
+
+```
+portfolio_armin_imamovic/
+├── index.html              # Main portfolio file (self-contained)
+├── CV_pic.jpeg            # Profile picture
+├── Armin_Imamovic_CV.pdf  # CV download
+├── Portfolio_Redirect.html # Redirect page (optional)
+└── README.md              # This file
+```
 
 ## Deployment
 
